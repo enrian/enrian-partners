@@ -6,7 +6,8 @@
 }
 
 .c-logo__link {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .c-logo__img {
@@ -18,27 +19,4 @@
     height: $logo-h;
     margin-top: calc((#{$header-h} - #{$logo-h}) / 2);
   }
-}
-
-.c-logo__img--white * {
-  fill: $light-c !important;
-  opacity: .98;
-}
-
-.l-header .c-logo__img {
-  display: none;
-}
-
-.l-header .c-logo__img--white {
-  display: block;
-}
-
-.l-header.is-scrolled .c-logo__img,
-.l-header.is-open .c-logo__img {
-  display: block;
-}
-
-.l-header.is-scrolled .c-logo__img--white,
-.l-header.is-open .c-logo__img--white {
-  display: none;
 }

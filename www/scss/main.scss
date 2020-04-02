@@ -17,13 +17,13 @@
 // Layout
 @import
   "layout/layout",
-  // "layout/header",
+  "layout/header",
   "layout/footer";
 
 // Components
-// @import
+@import
   // "components/nav",
-  // "components/logo",
+  "components/logo";
   // "components/paralax-img",
   // "components/counter",
   // "components/member",
@@ -46,7 +46,8 @@
 
 // Objects
 @import
-  "objects/buttons";
+  "objects/buttons",
+  "objects/expert";
   // "objects/inputs",
   // "objects/galaxy",
   // "objects/slick",

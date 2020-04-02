@@ -1,0 +1,86 @@
+$expert-img-w--tablet: 300px;
+$expert-img-w--screen: 360px;
+$expert-img-w--largescreen: 440px;
+
+.expert {
+  position: relative;
+  z-index: 2;
+  background-color: $neutral-c;
+
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include mappy-query(tablet-bigger) {
+    &:after {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+
+      display: block;
+      width: 33.333%;
+      height: 100%;
+
+      background-color: $primary-c--darker;
+    }
+  }
+}
+
+.expert__content {
+  max-width: $wrapper-max-w;
+
+  margin: 0 auto;
+
+  @include mappy-query(tablet-bigger) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include mappy-query(screen) {
+  }
+}
+
+.expert__info {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+
+  @include mappy-query(tablet-bigger) {
+
+    min-height: 400px;
+  }
+
+  @include mappy-query(screen) {
+    min-height: 580px;
+  }
+}
+
+.expert__photo {
+  display: none;
+
+  @include mappy-query(tablet-bigger) {
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    right: calc(33.333% - (#{$expert-img-w--tablet} / 2));
+
+    width: $expert-img-w--tablet;
+
+    transform: translateY(-50%);
+  }
+
+  @include mappy-query(screen) {
+    right: calc(33.333% - (#{$expert-img-w--screen} / 2));
+
+    width: $expert-img-w--screen;
+  }
+
+  @include mappy-query(largescreen) {
+    right: calc(33.333% - (#{$expert-img-w--largescreen} / 2));
+
+    width: $expert-img-w--largescreen;
+  }
+}

@@ -81,15 +81,16 @@ $dark-c--lightest: #777777;
 
 $primary-c: #83B441;
 $primary-c--lighter: #91b113;
-$primary-c--darker: #76A635;
+$primary-c--darker: #78B526;
 $primary-c--dark: #679724;
+
 $primary-c--darkest: #394700;
 
 $secondary-c: #46167d;
 $secondary-c--lighter: #5d2d93;
 $secondary-c--darker: #350868;
 
-$neutral-c: #ebebeb;
+$neutral-c: #FCF9F9;
 $neutral-c--lightest: #f8f8f8;
 $neutral-c--darker: #2f2f33;
 $neutral-c--darkest: #2a2a2a;
@@ -111,6 +112,8 @@ $ngi-primary-c--darker: #0F563F;
 //-------------------------------//
 //             LAYOUT            //
 //-------------------------------//
+$wrapper-max-w: 60rem;
+
 $header-h: 80px;
 $logo-h: 42px;
 $logo-h--bigger: 54px;
@@ -120,28 +123,13 @@ $logo-h--bigger: 54px;
 //-------------------------------//
 $nav-z-index: 100;
 
-//-------------------------------//
-//            GENERAL            //
-//-------------------------------//
-$border-r: 4px;
+
 
 //-------------------------------//
 //          COMPONENTS           //
 //-------------------------------//
 
-// Member
-$member-w: 160px;
-$member-h: $member-w;
 
-// MAP Trigger
-$map-trigger-w: 70px;
-$map-trigger-h: 70px;
-
-// Paralax-img
-$paralax-img-min-h: 260px;
-$paralax-img-h--tablet: 260px;
-$paralax-img-h--screen: 340px;
-$paralax-img-h--largescreen: 420px;
 
 // Forms
 $input-h: 44px;

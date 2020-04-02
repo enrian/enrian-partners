@@ -7,6 +7,9 @@
   width: 100%;
   height: $header-h;
 
+  background-color: $light-c;
+  box-shadow: 0 5px 12px rgba(0,0,0, .15);
+
   transition: background-color .3s;
 
   @include mappy-query(tablet) {
@@ -16,9 +19,10 @@
 
 .l-header__inner {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
-  max-width: 72rem;
+  max-width: $wrapper-max-w;
   height: $header-h;
 
   margin: 0 auto;
@@ -38,4 +42,19 @@
 
 .l-header.is-open {
   background-color: $light-c;
+}
+
+.l-header__claim {
+  max-width: $wrapper-max-w;
+  margin: 0 auto;
+
+  padding-top: calc(#{$header-h} + 2rem);
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+
+  @include mappy-query(tablet) {
+    padding-top: calc(6rem + #{$header-h});
+    padding-bottom: 6rem;
+  }
 }

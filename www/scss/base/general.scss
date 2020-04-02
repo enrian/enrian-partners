@@ -116,12 +116,6 @@ q {
   background-color: $neutral-c--lightest;
 }
 
-.bg-pattern {
-  background-image: url('../img/pattern.png');
-  background-repeat: repeat;
-  background-position: left top;
-}
-
 .c-light {
   color: $light-c;
 }
@@ -150,50 +144,10 @@ q {
   margin-left: auto;
 }
 
-.letter {
-}
-
-.letter::first-letter {
-  display: inline-block;
-
-  float: left;
-  padding-right: .625rem;
-
-  line-height: 3.4rem;
 
 
-  font-size: 4rem;
-  font-weight: 500;
-  color: $primary-c;
-}
-
-// TODO remove, when logos will be ready
-.logos-placeholder-wrapper {
-  padding-top: 2rem;
-  padding-right: 2rem;
-}
-
-.logos-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 360px;
-
-  padding: 2rem;
-
-  background-color: $neutral-c;
-
-  color: $neutral-c--darkest;
-}
 
 .not-displayed {
   display: none;
 }
 
-.enrian-collage {
-  display: block;
-  
-  width: 100%;
-  height: auto;
-}
