@@ -1,0 +1,58 @@
+.c-contact-list {
+  list-style: none;
+
+  margin-bottom: vr(2);
+  padding-left: 0;
+
+  font-family: 'open-sans', sans-serif;
+
+  @include mappy-query(tablet) {
+    padding-left: 3rem;
+  }
+}
+
+.c-contact-list__icons {
+  display: flex;
+}
+
+.c-contact-list__icon {
+  display: flex;
+
+  width: 50px;
+  height: 50px;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-top: vr(.25);
+  margin-right: 1rem;
+
+  border-radius: 50%;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  svg {
+    position: relative;
+    width: 22px;
+    height: 22px;
+
+    * {
+      fill: $light-c !important;
+    }
+  }
+}
+
+.c-contact-list__icon--twitter {
+  background-color: #27A2F0;
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.c-contact-list__icon--linkedin {
+  background-color: #0077B5;
+}

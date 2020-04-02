@@ -1,0 +1,54 @@
+.c-check-list {
+  list-style-type: none;
+
+  margin: 0 0 vr(1.5) 0;
+  padding: vr(1) 1.4rem;
+
+  background-color: $primary-c--darker;
+
+  box-shadow: 5px 6px 12px rgba($dark-c, .06);
+
+  @include mappy-query(tablet) {
+    width: 430px;
+
+    margin-bottom: 0;
+    padding: 3rem 1rem 3rem 2rem; 
+  }
+}
+
+.c-check-list__item {
+  display: flex;
+  align-items: flex-start;
+
+  position: relative;
+
+  margin-bottom: 1rem;
+
+  color: $light-c;
+  font-weight: 500;
+
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mappy-query(tablet) {
+    font-size: $font-s--bigger;
+  }
+}
+
+.c-check-list__icon {
+  position: relative;
+  top: 3px;
+
+  flex: 0 0 20px;
+
+  @include mappy-query(screen) {
+    flex-basis: 23px;
+  }
+}
+
+.c-check-list__text {
+  padding-left: 1rem;
+}

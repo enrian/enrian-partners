@@ -1,0 +1,47 @@
+.galaxy-wrapper {
+  display: none;
+
+  @include mappy-query(screen) {
+    display: block;
+
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 996px;
+
+    overflow: hidden;
+
+    top: $paralax-img-h--screen;
+  }
+
+  @include mappy-query(largescreen) {
+    top: $paralax-img-h--screen;
+  }
+}
+
+.galaxy-wrapper--subpage {
+  top: $paralax-img-h--screen;
+
+  @include mappy-query(largescreen) {
+    top: $paralax-img-h--largescreen;
+  }
+}
+
+.galaxy-icon {
+  position: absolute;
+
+  top: -498px;
+  right: -321px;
+
+  width: 1022px;
+  height: 996px;
+
+  opacity: .26;
+
+  g * {
+    fill: #e4e4e4 !important;
+    position: absolute;
+    right: -50%;
+  }
+}

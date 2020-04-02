@@ -1,0 +1,106 @@
+.c-hamburger {
+  position: relative;
+
+  width: 27px;
+  height: 20px;
+
+  margin-left: auto;
+
+  color: $light-c;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: right;
+
+  transition: all .24s linear;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include mappy-query(screen) {
+    display: none;
+  }
+}
+
+.c-hamburger.is-open {
+  border-radius: 2px 2px 0 0;
+
+  color: $light-c;
+}
+
+.c-hamburger__slice {
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+
+  width: 100%;
+
+  height: 2px;
+
+  border-radius: 2px;
+
+  background-color: $light-c;
+
+  &:last-of-type {
+      margin-bottom: 0;
+  }
+}
+
+.c-hamburger__slice:before,
+.c-hamburger__slice:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $light-c;
+  transition: all .24s linear;
+
+  border-radius: 2px;
+}
+
+.c-hamburger__slice:before {
+  top: -8px
+}
+
+.c-hamburger__slice:after {
+  top: 8px;
+}
+
+.is-open .c-hamburger__slice:before,
+.is-open .c-hamburger__slice:after {
+  background-color: $light-c;
+}
+
+.is-open .c-hamburger__slice:before,
+.is-open .c-hamburger__slice:after {
+  top: 0px;
+}
+
+.is-open  .c-hamburger__slice {
+  background: transparent;
+}
+
+.is-open .c-hamburger__slice:before {
+  transform: rotate(45deg);
+}
+
+.is-open .c-hamburger__slice:after {
+  transform: rotate(-45deg);
+}
+
+.l-header.is-scrolled .c-hamburger__slice,
+.l-header.is-scrolled .c-hamburger__slice:before,
+.l-header.is-scrolled .c-hamburger__slice:after,
+.l-header.is-open .c-hamburger__slice,
+.l-header.is-open .c-hamburger__slice:before,
+.l-header.is-open .c-hamburger__slice:after,  {
+  background-color: $text-c;
+}
+
+.l-header.is-scrolled .is-open .c-hamburger__slice,
+.l-header.is-open .is-open .c-hamburger__slice {
+  background: transparent;
+}

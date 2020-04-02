@@ -1,0 +1,147 @@
+//-------------------------------//
+//           RESPONSIVE          //
+//-------------------------------//
+$mobile-min:                1px;
+$mobile-l-min:              567px;
+$mobile-l-max:              736px;
+$mobile-max:                767px;
+
+$tablet-min:                768px;
+$tablet-l-min:              959px;
+$tablet-max:                1159px;
+
+$screen-min:                1160px;
+$screen-max:                1599px;
+
+$largescreen-min:           1600px;
+
+$container-gap: 1rem;
+
+$breakpoints: (
+  mobile-l-min: $mobile-l-min,
+  mobile-l-max: $mobile-l-max,
+
+  tablet-min: $tablet-min,
+  tablet-max: $tablet-max,
+  tablet-l-min: $tablet-l-min,
+
+  screen-min: $screen-min,
+  screen-max: $screen-max,
+
+  largescreen-min: $largescreen-min
+);
+
+$mappy-queries: (
+  mobile-only: mappy-bp(mobile-min mobile-max),
+  mobile-bigger: mappy-bp(mobile-l-min),
+  mobile-landscape: mappy-bp(mobile-l-min orientation landscape),
+  tablet: mappy-bp(tablet-min),
+  tabet-only: mappy-bp(tablet-min tablet-max),
+  tablet-bigger: mappy-bp(tablet-l-min),
+  tablet-landscape: mappy-bp(tablet-min orientation landscape),
+  screen: mappy-bp(screen-min),
+  screen-only: mappy-bp(screen-min screen-min),
+  largescreen: mappy-bp(largescreen-min)
+);
+
+//-------------------------------//
+//              MISC             //
+//-------------------------------//
+$img-path: './../img';
+$svg-path: './../svg';
+
+
+//-------------------------------//
+//           TYPOGRAPHY          //
+//-------------------------------//
+
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+$font-s--smaller: .875rem;
+$font-s--bigger: 1.125rem;
+$font-s--big: 1.25rem;
+$font-s--biggest: 1.375rem; //22px
+
+$heading-gap: 1.2rem;
+
+$font-family--text: 'open-sans', sans-serif;
+$font-family--headlines: 'ubuntu', Tahoma, Helvetica, sans-serif;
+
+//-------------------------------//
+//             COLORS            //
+//-------------------------------//
+$enrian-gray-c: #737373;
+$enrian-green-c: #759300;
+
+$light-c: #ffffff;
+$dark-c: #000000;
+$dark-c--lighter: #181818;
+$dark-c--lightest: #777777;
+
+$primary-c: #83B441;
+$primary-c--lighter: #91b113;
+$primary-c--darker: #76A635;
+$primary-c--dark: #679724;
+$primary-c--darkest: #394700;
+
+$secondary-c: #46167d;
+$secondary-c--lighter: #5d2d93;
+$secondary-c--darker: #350868;
+
+$neutral-c: #ebebeb;
+$neutral-c--lightest: #f8f8f8;
+$neutral-c--darker: #2f2f33;
+$neutral-c--darkest: #2a2a2a;
+
+$text-c--darker: #323232;
+$text-c: #484848;
+$text-c--lighter: #909090;
+$text-c--lightest: #b0b0b0;
+
+$negative-c: #c31515;
+
+$sato-bg-c: #BCE4FA;
+$sato-heading-c: #0078B4;
+$sato-heading-c--darker: #135988;
+
+$ngi-primary-c: #006341;
+$ngi-primary-c--darker: #0F563F;
+
+//-------------------------------//
+//             LAYOUT            //
+//-------------------------------//
+$header-h: 80px;
+$logo-h: 42px;
+$logo-h--bigger: 54px;
+
+//-------------------------------//
+//            Z-INDEX            //
+//-------------------------------//
+$nav-z-index: 100;
+
+//-------------------------------//
+//            GENERAL            //
+//-------------------------------//
+$border-r: 4px;
+
+//-------------------------------//
+//          COMPONENTS           //
+//-------------------------------//
+
+// Member
+$member-w: 160px;
+$member-h: $member-w;
+
+// MAP Trigger
+$map-trigger-w: 70px;
+$map-trigger-h: 70px;
+
+// Paralax-img
+$paralax-img-min-h: 260px;
+$paralax-img-h--tablet: 260px;
+$paralax-img-h--screen: 340px;
+$paralax-img-h--largescreen: 420px;
+
+// Forms
+$input-h: 44px;

@@ -1,0 +1,81 @@
+// Steps
+
+$step-num-h: 2.25rem;
+$step-vertical-p: vr(1.5);
+
+$step-divider-c: #58595b;
+
+$cta-c: #78bb43;
+
+.l-steps {
+  @include mappy-query(tablet) {
+    margin-top: 5rem;
+  }
+}
+
+.c-step {
+  position: relative;
+
+  padding: $step-vertical-p 1.6rem;
+  
+  display: flex;
+  justify-content: center;
+
+  min-height: 240px;
+  
+  margin-bottom: 0;
+  padding: $step-vertical-p / 2 0 $step-vertical-p / 2;
+
+  @include mappy-query(tablet) {
+    min-height: 320px;
+  }
+}
+
+.c-step:first-of-type {
+  padding-top: 2rem;
+  @include mappy-query(tablet) {
+    padding-top: 0;
+  }
+}
+
+.c-step:last-of-type {
+  min-height: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.c-step__img {
+  @include mappy-query(tablet) {
+    flex: 0 0 65%;
+  }
+}
+
+.c-step__divider {
+  position: relative;
+  display: flex;
+
+  flex: 0 0 10%;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.c-step__number {
+  margin-bottom: vr(.50);
+
+  font-size: $step-num-h;
+  line-height: 1;
+
+  color: $cta-c;
+}
+
+.c-step__path {
+  position: absolute;
+  bottom: 0;
+
+  width: 1px;
+  height: calc(100% - (#{$step-num-h} + 1rem));
+
+  border-left: 1px dashed $step-divider-c;
+}

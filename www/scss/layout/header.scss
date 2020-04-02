@@ -1,0 +1,41 @@
+.l-header {
+  position: fixed;
+  z-index: $nav-z-index;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: $header-h;
+
+  transition: background-color .3s;
+
+  @include mappy-query(tablet) {
+    padding: 0 1.5rem;
+  }
+};
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+
+  max-width: 72rem;
+  height: $header-h;
+
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include mappy-query(screen) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.l-header.is-scrolled {
+  background-color: $light-c;
+  box-shadow: 0 3px 18px rgba(00,00,00, .18);
+}
+
+.l-header.is-open {
+  background-color: $light-c;
+}

@@ -1,0 +1,199 @@
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+// New way how to include typi
+// https://github.com/zellwk/typi#using-typi-base-font-map
+@include typi-init();
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+
+  font-family: $font-family--text;
+  color: $text-c;
+}
+
+a {
+  font-weight: 500;
+
+  color: $secondary-c;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.is-active {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0 0 vr(.5) 0;
+
+  line-height: 2;
+}
+
+ul {
+  margin: 0;
+  padding-left: .5rem;
+
+  li {
+    margin-bottom: vr(.25);
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+  margin-top: 0;
+  padding-left: 1rem;
+
+  li {
+    padding-left: .5rem;
+    margin-bottom: 5px;
+  }
+
+  li ul {
+    padding: .5rem 0 .5rem 1.5rem;
+    list-style-type: lower-alpha;
+
+    li:before {
+      content: "";
+      display: none;
+    }
+  }
+}
+
+em {
+  font-weight: 700;
+}
+
+q {
+  display: block;
+
+  font-style: italic;
+}
+
+.tablet-and-more {
+  display: none;
+
+  @include mappy-query(tablet) {
+    display: block;
+  }
+}
+
+.cf {
+  @extend %clearfix;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect( 1px, 1px, 1px, 1px );
+  clip-path: inset( 50% );
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.bg-green {
+  background-color: $primary-c;
+}
+
+.bg-gray {
+  background-color: $neutral-c--lightest;
+}
+
+.bg-pattern {
+  background-image: url('../img/pattern.png');
+  background-repeat: repeat;
+  background-position: left top;
+}
+
+.c-light {
+  color: $light-c;
+}
+
+.vertical-center {
+  align-items: center;
+}
+
+.responsive-img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.horizontal-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.letter {
+}
+
+.letter::first-letter {
+  display: inline-block;
+
+  float: left;
+  padding-right: .625rem;
+
+  line-height: 3.4rem;
+
+
+  font-size: 4rem;
+  font-weight: 500;
+  color: $primary-c;
+}
+
+// TODO remove, when logos will be ready
+.logos-placeholder-wrapper {
+  padding-top: 2rem;
+  padding-right: 2rem;
+}
+
+.logos-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 360px;
+
+  padding: 2rem;
+
+  background-color: $neutral-c;
+
+  color: $neutral-c--darkest;
+}
+
+.not-displayed {
+  display: none;
+}
+
+.enrian-collage {
+  display: block;
+  
+  width: 100%;
+  height: auto;
+}

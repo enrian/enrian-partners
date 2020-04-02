@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "Enrian web",
+  "description": "Enrian Partners a.s. website",
+  "icons": {
+    "60": "/www/favicons/firefox_app_60x60.png",
+    "128": "/www/favicons/firefox_app_128x128.png",
+    "512": "/www/favicons/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Enrian Partners a.s.",
+    "url": "https://enrian.com/"
+  }
+}

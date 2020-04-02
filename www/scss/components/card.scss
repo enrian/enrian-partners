@@ -1,0 +1,75 @@
+.c-card {
+  max-width: 592px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: $light-c;
+
+  box-shadow: 6px 6px 15px rgba($dark-c, .06);
+}
+
+.c-card__inner {
+  display: flex;
+  flex-direction: column-reverse;
+
+  padding: 1.5rem;
+
+  @include mappy-query(tablet) {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.c-card__content {
+  @include mappy-query(tablet) {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    padding-left: 1rem
+  }
+}
+
+.c-card__name,
+.c-card__position {
+  margin-bottom: vr(.25);
+
+  text-transform: none;
+}
+
+.c-card__name {
+  margin-top: vr(.25);
+
+  font-size: $font-s--biggest;
+}
+
+.c-card__position {
+  margin-top: 0;
+
+  font-family: $font-family--text;
+  font-size: $font-s--smaller;
+  font-style: italic;
+  font-weight: 400;
+  color: $primary-c;
+}
+
+.c-card__description {
+  font-size: $font-s--smaller;
+  line-height: 1.8;
+}
+
+.c-card__img-wrapper {
+  margin-bottom: vr(.5);;
+
+  @include mappy-query(tablet) {
+    flex: 0 0 50%;
+    max-width: 200px;
+
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

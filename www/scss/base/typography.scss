@@ -1,0 +1,116 @@
+@include font-face(open-sans, '../fonts/OpenSans-Light', 200, normal, woff woff2);
+@include font-face(open-sans, '../fonts/OpenSans-Regular', 400, normal, woff woff2);
+@include font-face(open-sans, '../fonts/OpenSans-Semibold', 500, normal, woff woff2);
+@include font-face(open-sans, '../fonts/OpenSans-Bold', 700, normal, woff woff2);
+@include font-face(open-sans, '../fonts/OpenSans-Italic', 400, italic, woff woff2);
+
+@include font-face(ubuntu, '../fonts/Ubuntu-medium', 500, normal, woff woff2);
+
+
+$typi: (
+  base: (
+    null: (16px, 1.6), // null vychozi hodnota - mobile
+  ),
+
+  h1-font-map: (
+    null: (36px, 1.6),
+    largescreen-min: (40px, 1.25),
+  ),
+
+  h2-font-map: (
+    null: (22px, 1.6),
+    tablet-min: (26px, 1.75),
+    screen-min: (28px, 1.75),
+  ),
+
+  h3-font-map: (
+    null: (18px, 1.4),
+    tablet-min: (18px, 1.4),
+    screen-min: (18px, 1.4),
+  ),
+
+  h4-font-map: (
+    null: (16px, 1.5),
+  ),
+
+  h5-font-map: (
+    null: (14px, 1.4),
+  ),
+
+  h6-font-map: (
+    null: (12px, 1.5),
+  )
+);
+
+h1, h2, h3, h4, h5, h6, q {
+  font-family: $font-family--headlines;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  margin: $heading-gap 0;
+
+  letter-spacing: 1px;
+
+  @include mappy-query(screen) {
+  }
+}
+
+h1, .h1 {
+  @include typi('h1-font-map');
+}
+
+h2, .h2 {
+  @include typi('h2-font-map');
+}
+
+h3, .h3 {
+  @include typi('h3-font-map');
+}
+
+h4, .h4 {
+  @include typi('h4-font-map');
+  text-transform: none;
+}
+
+h5, .h5 {
+  @include typi('h5-font-map');
+  letter-spacing: 0;
+}
+
+h6, .h6 {
+  @include typi('h6-font-map');
+  letter-spacing: 0;
+}
+
+.h2--value {
+  margin: 0 0 vr(1) 0;
+
+  text-transform: none;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+
+  color: $light-c;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.text-s-bigger {
+  font-size: 1.25rem;
+}
+
+.text-s-smaller {
+  font-size: $font-s--smaller;
+}
+
+.emphasis {
+  font-size: 1.125rem;
+  line-height: 1.8;
+
+  text-align: center;
+
+  color: $dark-c--lightest;
+}

@@ -1,0 +1,26 @@
+.l-footer {
+  position: relative;
+
+  background-color: $neutral-c--darkest;
+
+  color: $text-c--lightest;
+
+  border-top: 6px solid lighten($secondary-c, 6%);
+
+  font-family: 'open-sans', sans-serif;
+}
+
+.l-footer__logo {
+  width: 180px;
+
+  margin-bottom: vr(1.5);
+
+  * {
+    fill: #707070 !important;
+  }
+}
+
+.l-footer__copy {
+  margin-bottom: 0;
+  font-size: .625rem;
+}

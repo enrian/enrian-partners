@@ -1,0 +1,155 @@
+.c-nav {
+  position: absolute;
+  top: $header-h;
+  left: 0;
+
+  width: 100%;
+
+  transform: translateX(100%);
+
+  transition: transform .26s linear;
+
+  @include mappy-query(screen) {
+    position: static;
+
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: $header-h;
+
+    transform: translateX(0);
+
+    background-color: transparent;
+  }
+}
+
+.c-nav.is-open {
+  transform: translateX(0);
+}
+
+.c-nav__list {
+  margin: 0 0 0 auto;
+  padding: 0 0 1rem 0;
+
+  list-style-type: none;
+
+  background-color: $light-c;
+
+  @include mappy-query(screen) {
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    height: $header-h;
+
+    padding-bottom: 0;
+
+    background-color: transparent;
+  }
+}
+
+.c-nav.is-open .c-nav__list {
+  box-shadow: 0 10px 18px rgba(00,00,00, .18);
+
+  @include mappy-query(screen) {
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.c-nav__item {
+  flex: 0 0 auto;
+
+  align-items: center;
+  text-align: center;
+
+  &:last-child {
+    padding-right: 0;
+    margin-bottom: vr(.25);
+  }
+
+  @include mappy-query(tablet) {
+    padding: 0 1rem;
+  }
+
+}
+
+.c-nav__link {
+  display: inline-block;
+
+  position: relative;
+
+  padding: .8rem;
+
+  font-family: 'ubuntu', sans-serif;
+
+  font-size: .875rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text-c;
+
+  transition: color .3s;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:after {
+    content: "";
+
+    display: block;
+
+    position: absolute;
+    width: calc(100% - (2 * .8rem));
+    left: .8rem;
+    bottom: 11px;
+
+    height: 2px;
+
+    background-color: transparent;
+
+    transition: background-color .18s linear;
+  }
+
+  @include mappy-query(screen) {
+    color: rgba($light-c, .95);
+  }
+}
+
+.c-nav__link:hover,
+.c-nav__link:active,
+.c-nav__link:focus,
+.c-nav__link.is-active {
+  color: $secondary-c;
+
+  &:after {
+    background-color: $secondary-c;
+  }
+
+  @include mappy-query(screen) {
+    color: rgba($light-c, .95);
+
+    &:after {
+      background-color: rgba($light-c, .95);
+    }
+  }
+}
+
+.l-header.is-scrolled .c-nav__link {
+  color: $text-c;
+}
+
+.l-header.is-scrolled .c-nav__link:hover,
+.l-header.is-scrolled .c-nav__link:active,
+.l-header.is-scrolled .c-nav__link:focus,
+.l-header.is-scrolled .c-nav__link.is-active {
+  color: $secondary-c;
+
+  &:after {
+    background-color: $secondary-c;
+  }
+}

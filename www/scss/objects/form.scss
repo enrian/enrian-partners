@@ -1,0 +1,101 @@
+form {
+  font-family: 'open-sans', sans-serif;
+}
+
+input,
+select,
+textarea {
+}
+
+input[type="email"],
+input[type="submit"],
+input[type="text"],
+textarea {
+  -webkit-appearance: none;
+  border: solid 1px #000;
+  border-radius: 2px;
+  width: 100%;
+  height: $input-h;
+  margin-bottom: 30px;
+  padding: 0 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0 none;
+  box-shadow: 0 0 0 0;
+}
+
+textarea {
+  height: 140px;
+  margin-bottom: vr(.5);
+  padding: 0.625rem 1rem;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+}
+
+select > option:first-child {
+  color: gray;
+}
+
+label {
+  cursor: pointer;
+}
+
+.form__message {
+  padding: vr(.75) 1.25rem;
+  margin-bottom: vr(1.25);
+
+  border-radius: 3px;
+
+  font-weight: 500;
+  color: $light-c;
+}
+
+.form__message--positive {
+  background-color: $primary-c--lighter;
+}
+
+.form__message--negative {
+  background-color: $negative-c;
+}
+
+.form__input {
+  margin-bottom: 2.25rem;
+}
+
+.form__input--last {
+  margin-bottom: vr(.75);
+}
+
+.form__input {
+  @include mappy-query(tablet) {
+    float: left;
+    width: 50%;
+    padding: 0 1rem 0 0;
+
+    &:nth-of-type(odd) {
+      clear: both;
+    }
+
+    &:nth-of-type(even) {
+      padding-right: 0;
+    }
+  }
+}
+
+.form__input--full-w {
+  @include mappy-query(tablet) {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+}

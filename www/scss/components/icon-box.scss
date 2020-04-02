@@ -1,0 +1,72 @@
+.l-icon-boxes {
+  list-style-type: none;
+  
+  @include mappy-query(tablet) {
+    display: flex;
+
+    margin-left: -1rem;
+  }
+
+  @include mappy-query(screen) {
+    margin-left: -2.2rem;
+  }
+}
+
+.l-icon-box {
+  margin-bottom: vr(1);
+
+  @include mappy-query(tablet) {
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+
+    margin-bottom: 0;
+    padding-left: 1rem;
+  }
+
+  @include mappy-query(screen) {
+    padding-left: 2.2rem;
+  }
+}
+
+.c-icon-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 100%;
+
+  padding: vr(1.5) 0 vr(1) 0;
+
+  background-color: $light-c;
+  box-shadow: 5px 5px 15px rgba($dark-c, .06);
+
+  @include mappy-query(tablet) {
+    padding: vr(2) 0 vr(1.5) 0;
+  }
+}
+
+.c-icon-box__icon {
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: .5rem;
+}
+
+.c-icon-box__number,
+.c-icon-box__type {
+  font-weight: 700;
+}
+
+.c-icon-box__number {
+  font-size: 1.5rem;
+  color: $primary-c;
+}
+
+.c-icon-box__type {
+  width: 60%;
+  text-align: center;
+
+  text-transform: uppercase;
+  font-size: $font-s--smaller;
+}

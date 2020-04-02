@@ -1,0 +1,170 @@
+.cs-heading {
+  max-width: 860px;
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: vr(1.5);
+  
+  @include mappy-query(tablet) {
+    margin-bottom: vr(1.75);
+  }
+
+  @include mappy-query(screen) {
+    margin-bottom: vr(2);
+  }
+}
+
+.cs-heading--no-mb {
+  max-width: 860px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  margin-bottom: 0;
+}
+
+.cs-img {
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 100%;
+
+  @include mappy-query(tablet) {
+    margin-top: 80px;
+    padding-left: 2rem;
+  }
+
+  @include mappy-query(screen) {
+    padding-left: 3rem;
+  }
+}
+
+.cs-img--on-left {
+  @include mappy-query(tablet) {
+    padding-right: 2rem;
+    padding-left: 0;
+  }
+
+  @include mappy-query(screen) {
+    padding-right: 3rem;
+    padding-left: 0;
+  }
+}
+
+.cs-img-corners {
+  border-radius: 6px;
+
+  @include mappy-query(tablet) {
+    border-radius: 8px; 
+  }
+
+  @include mappy-query(tablet-bigger) {
+    border-radius: 10px; 
+  }
+}
+
+.cs-img--eva-path {
+  @include mappy-query(tablet-bigger) {
+    width: 68%;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.cs-numbers {
+  @include mappy-query(tablet) {
+    padding-left: 2rem;
+  }
+
+  @include mappy-query(tablet-bigger) {
+    padding-left: 4rem;
+  }
+}
+
+.cs-paragraph {
+  @include mappy-query(tablet) {
+    max-width: 50.00rem;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// unused for now
+.cs-enrian-roles {
+  @include mappy-query(tablet) {
+    display: flex;
+  }
+
+  .cs-enrian-roles__list {
+    @include mappy-query(tablet) {
+      flex-basis: 66.666%
+    }
+
+    @include mappy-query(screen) {
+      flex-basis: 506%
+    }
+  }
+
+  .cs-enrian-roles__numbers {
+    @include mappy-query(tablet) {
+      flex-basis: 33.333%;
+    }
+  }
+}
+
+// Slovesna sporitelna
+.sato {
+  h1, h2, h3 {
+    color: $sato-heading-c;
+  }
+
+  .c-check-list {
+    background-color: #40A3D5;
+
+    color: $light-c;
+  }
+
+  .c-check-list__icon path {
+    fill: #00497B;
+  }
+
+  .c-number__count {
+    color: $sato-heading-c--darker;
+  }
+
+  .c-number__heading {
+    color: $sato-heading-c;
+  }
+
+  .c-result:before {
+    border-top-color: #40A3D5;
+  }
+
+  .c-result__heading {
+    color: $sato-heading-c--darker;
+  }
+
+  .c-card__position {
+    color: $sato-heading-c--darker;
+  }
+
+  .btn--cta {
+    background-color: #EE7101;
+
+    &:after {
+      background-color: #FF7900;
+    }
+  }
+
+  .c-icon-box__icon path {
+    fill: #DF1D2B;
+  }
+
+  .c-icon-box__number {
+    color: $sato-heading-c--darker;
+  }
+}

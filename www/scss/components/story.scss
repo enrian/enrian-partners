@@ -1,0 +1,70 @@
+.l-stories {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3rem;
+
+  @include mappy-query(tablet) {}
+
+  @include mappy-query(screen) {
+    padding: 0 3rem;
+  }
+}
+
+.c-story {
+  margin: 0 auto vr(1);
+
+  @include mappy-query(tablet) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @include mappy-query(screen) {
+    display: flex;
+
+    margin-bottom: 0;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @include mappy-query(largescreen) {
+    margin-bottom: 0;
+  }
+}
+
+.c-story__visual {
+  max-width: 160px;
+  
+  flex: 0 0 160px;
+
+  margin: 0;
+
+  @include mappy-query(screen) {
+  }
+}
+
+.c-story__img {
+  display: block;
+
+  width: 120px;
+  height: 120px;
+
+  margin: 0 auto;
+
+  border-radius: 50%;
+
+  @include mappy-query(screen) {
+    margin: 0;
+  }
+}
+
+.c-story__heading {
+  @extend .h4;
+
+  margin-top: 0;
+  margin-bottom: vr(.25);
+}
+
+.c-story__text p {
+  margin-bottom: 0;
+}
