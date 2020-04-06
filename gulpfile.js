@@ -12,7 +12,8 @@ const pug = require('gulp-pug');
 const browserSync = require('browser-sync').create();
 const flexbugsFixes = require('postcss-flexbugs-fixes');
 const favicons = require('gulp-favicons');
-const babel = require("gulp-babel");
+const babel = require('gulp-babel');
+const webp = require('gulp-webp');
 
 // File path variables
 const files = {
@@ -89,6 +90,12 @@ function htmlTask() {
 
 function imgsTask() {
   return src(files.imgSrc)
+    .pipe(dest('./dist/www/img'))
+}
+
+function imgsWebpTask() {
+  return src(files.imgSrc)
+    .pipe(webp())
     .pipe(dest('./dist/www/img'))
 }
 
@@ -172,8 +179,7 @@ exports.default = series(
   htmlTask,
   jsVendorsTask,
   jsBabel,
-  parallel(imgsTask, logosTash, svgTask, faviconTask, fontsTask),
-  // nodeApp,
+  parallel(imgsTask, imgsWebpTask, logosTash, svgTask, faviconTask, fontsTask),
   parallel(scssManualTask, jsTask),
   watchTask
 );
@@ -183,9 +189,8 @@ exports.build = series(
   htmlTask,
   jsVendorsTask,
   jsBabel,
-  parallel(imgsTask, logosTash, svgTask, faviconTask, fontsTask),
+  parallel(imgsTask, imgsWebpTask, logosTash, svgTask, faviconTask, fontsTask),
   nodeConfig,
-  // nodeApp,
   parallel(scssManualTask, jsTask)
 );
 

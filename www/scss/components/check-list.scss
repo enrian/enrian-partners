@@ -1,18 +1,7 @@
 .c-check-list {
   list-style-type: none;
 
-  margin: 0 0 vr(1.5) 0;
-  padding: vr(1) 1.4rem;
-
-  background-color: $primary-c--darker;
-
-  box-shadow: 5px 6px 12px rgba($dark-c, .06);
-
   @include mappy-query(tablet) {
-    width: 430px;
-
-    margin-bottom: 0;
-    padding: 3rem 1rem 3rem 2rem; 
   }
 }
 
@@ -24,17 +13,15 @@
 
   margin-bottom: 1rem;
 
-  color: $light-c;
+  color: $text-c;
   font-weight: 500;
-
-
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @include mappy-query(tablet) {
-    font-size: $font-s--bigger;
+    // font-size: $font-s--bigger;
   }
 }
 
@@ -43,6 +30,10 @@
   top: 3px;
 
   flex: 0 0 20px;
+
+  & * {
+    fill: $primary-c;
+  }
 
   @include mappy-query(screen) {
     flex-basis: 23px;

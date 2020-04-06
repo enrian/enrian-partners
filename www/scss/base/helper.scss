@@ -62,6 +62,10 @@
   margin-bottom: 0 !important;
 }
 
+.mb-5 {
+  margin-bottom: 5px;
+}
+
 .mt-0 {
   margin-top: 0 !important;
 }
@@ -154,25 +158,12 @@
   color: $primary-c;
 }
 
-.text-c-primary-darker {
-  color: $primary-c--dark;
-}
-
 .text-c-lighter {
   color: $text-c--lighter;
 }
 
 .text-c-darker {
   color: $text-c--darker;
-}
-
-// sato colors
-.text-c-sato-heading {
-  color: $sato-heading-c !important;
-}
-
-.text-c-sato-heading--darker {
-  color: $sato-heading-c--darker !important;
 }
 
 .full-w {

@@ -1,14 +1,13 @@
 $expert-img-w--tablet: 300px;
-$expert-img-w--screen: 360px;
-$expert-img-w--largescreen: 440px;
+$expert-img-w--screen: 380px;
+$expert-img-w--largescreen: 410px;
 
 .expert {
   position: relative;
   z-index: 2;
   background-color: $neutral-c;
 
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 2rem 1rem;
 
   @include mappy-query(tablet-bigger) {
     &:after {
@@ -23,7 +22,7 @@ $expert-img-w--largescreen: 440px;
       width: 33.333%;
       height: 100%;
 
-      background-color: $primary-c--darker;
+      background-color: $primary-c;
     }
   }
 }
@@ -33,12 +32,10 @@ $expert-img-w--largescreen: 440px;
 
   margin: 0 auto;
 
-  @include mappy-query(tablet-bigger) {
+  @include mappy-query(tablet) {
     display: flex;
-    justify-content: space-between;
-  }
-
-  @include mappy-query(screen) {
+    align-items: center;
+    justify-content: space-between;    
   }
 }
 
@@ -48,8 +45,11 @@ $expert-img-w--largescreen: 440px;
   flex: 1 1 auto;
 
   @include mappy-query(tablet-bigger) {
-
     min-height: 400px;
+    max-width: 400px;
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   @include mappy-query(screen) {
@@ -60,9 +60,13 @@ $expert-img-w--largescreen: 440px;
 .expert__photo {
   display: none;
 
-  @include mappy-query(tablet-bigger) {
+  @include mappy-query(tablet) {
     display: block;
 
+    width: 220px;
+  }
+
+  @include mappy-query(tablet-bigger) {
     position: absolute;
     top: 50%;
     right: calc(33.333% - (#{$expert-img-w--tablet} / 2));
@@ -82,5 +86,48 @@ $expert-img-w--largescreen: 440px;
     right: calc(33.333% - (#{$expert-img-w--largescreen} / 2));
 
     width: $expert-img-w--largescreen;
+  }
+}
+
+.expert__availability {
+  position: relative;
+  top: 2px;
+
+  font-weight: 700;
+  font-size: $font-s--biggest;
+  color: $primary-c;
+}
+
+.expert--revert {
+  background-color: $light-c;
+
+  @include mappy-query(tablet-bigger) {
+    background-color: $neutral-c;
+
+    &:after {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  .expert__content {
+    @include mappy-query(tablet) {
+      flex-flow: row-reverse;
+    }
+  }
+
+  .expert__photo {
+    right: auto;
+    left: calc(33.333% - (#{$expert-img-w--tablet} / 2));
+  }
+
+  .expert__info {
+    @include mappy-query(tablet) {
+      padding-left: 2rem;
+    }
+
+    @include mappy-query(tablet-bigger) {
+      padding-left: 0;
+    }
   }
 }

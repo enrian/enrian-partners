@@ -41,8 +41,9 @@ p {
 }
 
 ul {
+  list-style-type: none;
   margin: 0;
-  padding-left: .5rem;
+  padding: 0;
 
   li {
     margin-bottom: vr(.25);
@@ -106,14 +107,6 @@ q {
   position: absolute;
   width: 1px;
   word-wrap: normal;
-}
-
-.bg-green {
-  background-color: $primary-c;
-}
-
-.bg-gray {
-  background-color: $neutral-c--lightest;
 }
 
 .c-light {

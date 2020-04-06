@@ -50,7 +50,6 @@ $mappy-queries: (
 $img-path: './../img';
 $svg-path: './../svg';
 
-
 //-------------------------------//
 //           TYPOGRAPHY          //
 //-------------------------------//
@@ -61,7 +60,7 @@ $base-line-height: 1.5;
 $font-s--smaller: .875rem;
 $font-s--bigger: 1.125rem;
 $font-s--big: 1.25rem;
-$font-s--biggest: 1.375rem; //22px
+$font-s--biggest: 1.375rem;
 
 $heading-gap: 1.2rem;
 
@@ -76,38 +75,20 @@ $enrian-green-c: #759300;
 
 $light-c: #ffffff;
 $dark-c: #000000;
-$dark-c--lighter: #181818;
-$dark-c--lightest: #777777;
 
-$primary-c: #83B441;
-$primary-c--lighter: #91b113;
-$primary-c--darker: #78B526;
-$primary-c--dark: #679724;
-
-$primary-c--darkest: #394700;
+$primary-c: #78B526;
+$primary-c--darker: #6EAC1B;
 
 $secondary-c: #46167d;
 $secondary-c--lighter: #5d2d93;
-$secondary-c--darker: #350868;
 
 $neutral-c: #FCF9F9;
-$neutral-c--lightest: #f8f8f8;
-$neutral-c--darker: #2f2f33;
 $neutral-c--darkest: #2a2a2a;
 
 $text-c--darker: #323232;
 $text-c: #484848;
-$text-c--lighter: #909090;
-$text-c--lightest: #b0b0b0;
-
-$negative-c: #c31515;
-
-$sato-bg-c: #BCE4FA;
-$sato-heading-c: #0078B4;
-$sato-heading-c--darker: #135988;
-
-$ngi-primary-c: #006341;
-$ngi-primary-c--darker: #0F563F;
+$text-c--lighter: #727272;
+$text-c--lightest: #AFAFAF;
 
 //-------------------------------//
 //             LAYOUT            //
@@ -122,14 +103,3 @@ $logo-h--bigger: 54px;
 //            Z-INDEX            //
 //-------------------------------//
 $nav-z-index: 100;
-
-
-
-//-------------------------------//
-//          COMPONENTS           //
-//-------------------------------//
-
-
-
-// Forms
-$input-h: 44px;

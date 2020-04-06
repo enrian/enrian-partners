@@ -1,5 +1,5 @@
 .l-header {
-  position: fixed;
+  // position: fixed;
   z-index: $nav-z-index;
   top: 0;
   left: 0;
@@ -8,7 +8,7 @@
   height: $header-h;
 
   background-color: $light-c;
-  box-shadow: 0 5px 12px rgba(0,0,0, .15);
+  // box-shadow: 0 5px 12px rgba(0,0,0, .15);
 
   transition: background-color .3s;
 
@@ -48,13 +48,24 @@
   max-width: $wrapper-max-w;
   margin: 0 auto;
 
-  padding-top: calc(#{$header-h} + 2rem);
-  padding-right: 1rem;
-  padding-bottom: 2rem;
-  padding-left: 1rem;
-
+  // padding-top: calc(#{$header-h} + 2rem);
+  padding: 2rem 1rem;
+  
   @include mappy-query(tablet) {
-    padding-top: calc(6rem + #{$header-h});
+    // padding-top: calc(6rem + #{$header-h});
+    padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  
+
+  h1 {
+    @include mappy-query(tablet) {
+
+    }
+
+    @include mappy-query(screen) {
+      width: 80%;
+    }
   }
 }

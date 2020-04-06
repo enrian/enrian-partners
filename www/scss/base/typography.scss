@@ -3,6 +3,7 @@
 @include font-face(open-sans, '../fonts/OpenSans-Semibold', 500, normal, woff woff2);
 @include font-face(open-sans, '../fonts/OpenSans-Bold', 700, normal, woff woff2);
 @include font-face(open-sans, '../fonts/OpenSans-Italic', 400, italic, woff woff2);
+@include font-face(open-sans, '../fonts/OpenSans-SemiboldItalic', 500, italic, woff woff2);
 
 @include font-face(ubuntu, '../fonts/Ubuntu-medium', 500, normal, woff woff2);
 
@@ -13,43 +14,34 @@ $typi: (
   ),
 
   h1-font-map: (
-    null: (36px, 1.6),
-    screen-min: (56px, 1.25),
+    null: (28px, 1.4),
+    tablet-min: (30px, 1.2),
+    screen-min: (40px, 1.25),
     largescreen-min: (40px, 1.25),
   ),
 
   h2-font-map: (
-    null: (22px, 1.6),
-    tablet-min: (26px, 1.75),
-    screen-min: (28px, 1.75),
+    null: (24px, 1.3),
+    tablet-min: (32px, 1.2),
+    screen-min: (42px, 1.2),
   ),
 
   h3-font-map: (
-    null: (18px, 1.4),
+    null: (16px, 1.4),
     tablet-min: (18px, 1.4),
-    screen-min: (18px, 1.4),
+    screen-min: (20px, 1.4),
   ),
 
   h4-font-map: (
-    null: (16px, 1.5),
+    null: (16px, 1.4)
   ),
-
-  h5-font-map: (
-    null: (14px, 1.4),
-  ),
-
-  h6-font-map: (
-    null: (12px, 1.5),
-  )
 );
 
 h1, h2, h3, h4, h5, h6, q {
   font-family: $font-family--headlines;
-  font-weight: 700;
+  font-weight: 500;
 
-  text-transform: uppercase;
-
-  margin: $heading-gap 0;
+  margin: 0;
 
   letter-spacing: 1px;
 
@@ -59,44 +51,32 @@ h1, h2, h3, h4, h5, h6, q {
 
 h1, .h1 {
   @include typi('h1-font-map');
+
+  @include mappy-query(tablet-bigger) {
+    line-height: 1.4;
+  }
 }
 
 h2, .h2 {
+  color: $text-c--darker;
   @include typi('h2-font-map');
 }
 
 h3, .h3 {
+  font-family: $font-family--text;
+  font-style: italic;
+  font-weight: 500;
+  color: $primary-c--darker;
+
   @include typi('h3-font-map');
 }
 
 h4, .h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $text-c--lightest;
+
   @include typi('h4-font-map');
-  text-transform: none;
-}
-
-h5, .h5 {
-  @include typi('h5-font-map');
-  letter-spacing: 0;
-}
-
-h6, .h6 {
-  @include typi('h6-font-map');
-  letter-spacing: 0;
-}
-
-.h2--value {
-  margin: 0 0 vr(1) 0;
-
-  text-transform: none;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.4;
-
-  color: $light-c;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 }
 
 .text-s-bigger {
@@ -112,6 +92,4 @@ h6, .h6 {
   line-height: 1.8;
 
   text-align: center;
-
-  color: $dark-c--lightest;
 }
