@@ -2,7 +2,7 @@
   "server": "enrian_partners@webs.enrian.com",
   "port": 22,
   "server_dir": "/home/enrian_partners/web",
-  "repo": "ssh://git@github.com:enrian/enrian-partners.git",
+  "repo": "ssh://git@github.com/enrian/enrian-partners.git",
   "prj_git_relative_dir": "",
   "branch": "master",
   "force_regenerate_git_dir": true,
