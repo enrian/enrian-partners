@@ -1,0 +1,18 @@
+{
+  "server": "enrian_partners@webs.enrian.com",
+  "port": 22,
+  "server_dir": "/home/enrian_partners/web",
+  "repo": "ssh://git@github.com:enrian/enrian-partners.git",
+  "prj_git_relative_dir": "",
+  "branch": "master",
+  "force_regenerate_git_dir": true,
+  "shared_dirs": [
+    "node_modules"
+  ],
+  "shared_files": [
+  ],
+  "run_cmd": [
+    "[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh && node --version && yarn install && yarn gulp build && pm2 update ~/pm2.json && pm2 restart ~/pm2.json"
+  ]
+}
+
