@@ -48,7 +48,7 @@ jobs:
       - run: ssh-keyscan -H app.enrian.com >> ~/.ssh/known_hosts
       - run: ssh-keyscan -H stg.enrian.com >> ~/.ssh/known_hosts
       - run: ssh-keyscan -H webs.enrian.com >> ~/.ssh/known_hosts
-      - run: npm install mina -g
+      - run: sudo npm install mina -g
       - run: MINA_CONFIG="deploy.${CIRCLE_BRANCH}.json" mina deploy
 
 workflows:
