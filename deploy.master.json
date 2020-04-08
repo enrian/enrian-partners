@@ -15,7 +15,7 @@
     "[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh",
     "node --version",
     "yarn install",
-    "yarn gulp build",
+    "yarn gulp build"
   ],
   "run_cmd": "/bin/true"
 }
