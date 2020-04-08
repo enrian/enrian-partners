@@ -11,8 +11,13 @@
   ],
   "shared_files": [
   ],
-  "run_cmd": [
-    "[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh && node --version && yarn install && yarn gulp build && pm2 update ~/pm2.json && pm2 restart ~/pm2.json"
-  ]
+  "prerun": [
+    "[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh",
+    "node --version",
+    "yarn install",
+    "yarn gulp build",
+    "pm2 update ~/pm2.json",
+    "pm2 restart ~/pm2.json"
+  ],
+  "run_cmd": "/bin/true"
 }
-
